@@ -1,0 +1,110 @@
+/*Page Title*/
+
+.title{
+  font-size:46px; 
+}
+
+
+.container-1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+/*Button Container*/
+.container-btn{
+  width:70vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin:auto;
+}
+
+
+/*Button*/
+.btn-add-new{
+  position: fixed;
+  right:5%;
+  bottom: 10%;
+  background-color: rgb(35, 180, 132);
+  padding: 20px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius:50%;
+}
+
+
+.btn-add{
+  width: 100%;
+  padding: 10px 10px;
+  margin-top: 20px;
+  background-color:green;
+  cursor: pointer;
+  }
+  
+  .close{
+  width:100%;
+  padding: 10px 10px;
+  margin-top: 10px;
+  background-color:red;
+  cursor: pointer;
+  }
+
+/*Table*/
+table{
+width: 60%;
+margin:auto;
+margin-top: 50px;
+text-align: center;
+padding:20px;
+border-collapse: collapse;
+}
+
+table, th, td{
+  border:1px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+th{
+  font-size:25px;
+}
+
+td{
+  font-size: 20px;
+}
+
+
+.form-container{
+  display: none;
+  position: fixed;
+  right:5%;
+  bottom: 10%;
+  border:2px solid red;
+  background-color: white;
+  z-index:10;
+}
+
+.form{
+  width: 300px;
+  padding: 10px;
+}
+
+
+input{
+  width:100%;
+  padding: 10px;
+  margin: 5px 0 20px 0;
+}
+
+#yeas, #notyet{
+width: auto;
+}
+
+#notyet{
+  margin-left: 20px;
+}
+
