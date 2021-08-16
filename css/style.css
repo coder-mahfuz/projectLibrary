@@ -1,5 +1,5 @@
 body{
-  background:url("Background/cool-background.png");
+  background:url("./Background/cool-background.png");
   background-repeat: no-repeat;
   background-size:cover;
 }
