@@ -36,7 +36,6 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   const checked = document.querySelector('input[type="radio"]:checked');
   const status = checked.value;
 
-
   const book = new Book(title, author, pages, status);
 
   displayEachBook(book);
@@ -50,9 +49,8 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   <td>${book.title}</td>
   <td>${book.author}</td>
   <td>${book.pages}</td>
-  <td>${book.status}</td>
-  <td>Update</td>
-  <td class="remove">Remove</td>
+  <td class="update">${book.status}</td>
+  <td class="remove"><i class="far fa-trash-alt"></i></td>
 
 `
     list.appendChild(row);
@@ -88,8 +86,24 @@ function clearFields() {
 function removeBook(remove) {
   if (remove.classList.contains('remove')) {
     remove.parentElement.remove();
+  } else if (remove.classList.contains('fa-trash-alt')) {
+    remove.parentElement.parentElement.remove();
   }
 }
+
+/**
+ * Update read status
+ */
+function updateReadStatus(readStatus) {
+  if (readStatus.innerText == "Yeas") {
+    readStatus.innerText = "Not yet";
+  } else if (readStatus.innerText == "Not yet") {
+    readStatus.innerText = "Yeas";
+  }
+}
+
+
+
 
 /**
  * Get Click Target and Run removeBook Functiom
@@ -97,4 +111,5 @@ function removeBook(remove) {
 
 document.querySelector('#body').addEventListener('click', (e) => {
   removeBook(e.target);
+  updateReadStatus(e.target);
 })
